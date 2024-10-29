@@ -27,6 +27,7 @@ button {
     border-radius: 4px;
     font-size: 16px;
     transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Botões ocupam toda a largura */
 }
 
 button:hover {
@@ -55,8 +56,19 @@ p {
     margin: 8px 0;
 }
 
-#resultado-d20 {
+#resultado-dado {
     font-weight: bold;
     font-size: 18px;
     color: #e74c3c;
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px; /* Ajusta o tamanho dos botões */
+    }
+}
+
