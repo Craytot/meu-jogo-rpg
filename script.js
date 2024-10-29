@@ -140,3 +140,4 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("anotacoes-textarea").value = anotacoes;
     }
 });
+
