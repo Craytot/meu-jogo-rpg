@@ -7,34 +7,83 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Criação de Personagem</h1>
-    <button id="criar-personagem-button">Criar Personagem</button>
-    <button id="salvar-personagem-button">Salvar Personagem</button>
-    <button id="carregar-personagem-button">Carregar Personagem</button>
-    <div id="resultado-criacao"></div>
+    <div class="container"> <!-- Contêiner centralizado -->
+        <h1>RPG - Criador de Personagens</h1>
 
-    <h2>Inventário</h2>
-    <button id="adicionar-item-button">Adicionar Item</button>
-    <button id="salvar-inventario-button">Salvar Inventário</button>
-    <button id="carregar-inventario-button">Carregar Inventário</button>
-    <div id="lista-inventario"></div>
+        <div id="card-personagem" class="card">
+            <div class="card-header" onclick="toggleCard('card-personagem')">
+                <h2>Personagem</h2>
+            </div>
+            <div class="card-content" id="resultado-criacao" style="display: none;"></div>
+            <div class="card-actions">
+                <button id="criar-personagem-button">Criar Personagem</button>
+                <button id="editar-personagem-button">Editar Personagem</button>
+                <button id="salvar-personagem-button">Salvar Personagem</button>
+                <button id="carregar-personagem-button">Carregar Personagem</button>
+            </div>
+        </div>
 
-    <h2>Rolagem de Dados</h2>
-    <button id="rolar-d4-button">Rolar D4</button>
-    <button id="rolar-d6-button">Rolar D6</button>
-    <button id="rolar-d8-button">Rolar D8</button>
-    <button id="rolar-d10-button">Rolar D10</button>
-    <button id="rolar-d12-button">Rolar D12</button>
-    <button id="rolar-d20-button">Rolar D20</button>
-    <div id="resultado-dado"></div>
+        <div id="card-inventario" class="card">
+            <div class="card-header" onclick="toggleCard('card-inventario')">
+                <h2>Inventário</h2>
+            </div>
+            <div class="card-content" id="lista-inventario" style="display: none;"></div>
+            <div class="card-actions">
+                <button id="adicionar-item-button">Adicionar Item</button>
+                <button id="editar-inventario-button">Editar Item</button>
+                <button id="salvar-inventario-button">Salvar Inventário</button>
+                <button id="carregar-inventario-button">Carregar Inventário</button>
+            </div>
+        </div>
 
-    <h2>Anotações</h2>
-    <textarea id="anotacoes-textarea" rows="5" cols="30"></textarea>
-    <br>
-    <button id="salvar-anotacoes-button">Salvar Anotações</button>
-    <button id="carregar-anotacoes-button">Carregar Anotações</button>
+        <h2>Rolagem de Dados</h2>
+        <div id="dados" style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div class="dado-card" style="text-align: center;">
+                <img id="d4" src="imagens/d4.png" alt="D4" style="cursor: pointer; width: 80px; margin: 10px;" onclick="rolarDado(4)">
+                <p>D4</p>
+                <div id="resultado-d4" class="resultado"></div>
+            </div>
+            <div class="dado-card" style="text-align: center;">
+                <img id="d6" src="imagens/d6.png" alt="D6" style="cursor: pointer; width: 80px; margin: 10px;" onclick="rolarDado(6)">
+                <p>D6</p>
+                <div id="resultado-d6" class="resultado"></div>
+            </div>
+            <div class="dado-card" style="text-align: center;">
+                <img id="d8" src="imagens/d8.png" alt="D8" style="cursor: pointer; width: 80px; margin: 10px;" onclick="rolarDado(8)">
+                <p>D8</p>
+                <div id="resultado-d8" class="resultado"></div>
+            </div>
+            <div class="dado-card" style="text-align: center;">
+                <img id="d10" src="imagens/d10.png" alt="D10" style="cursor: pointer; width: 80px; margin: 10px;" onclick="rolarDado(10)">
+                <p>D10</p>
+                <div id="resultado-d10" class="resultado"></div>
+            </div>
+            <div class="dado-card" style="text-align: center;">
+                <img id="d12" src="imagens/d12.png" alt="D12" style="cursor: pointer; width: 80px; margin: 10px;" onclick="rolarDado(12)">
+                <p>D12</p>
+                <div id="resultado-d12" class="resultado"></div>
+            </div>
+            <div class="dado-card" style="text-align: center;">
+                <img id="d20" src="imagens/d20.png" alt="D20" style="cursor: pointer; width: 80px; margin: 10px;" onclick="rolarDado(20)">
+                <p>D20</p>
+                <div id="resultado-d20" class="resultado"></div>
+            </div>
+        </div>
+
+        <div id="card-anotacoes" class="card">
+            <div class="card-header" onclick="toggleCard('card-anotacoes')">
+                <h2>Anotações</h2>
+            </div>
+            <div class="card-content">
+                <textarea id="anotacoes-textarea" rows="5" cols="30"></textarea>
+            </div>
+            <div class="card-actions">
+                <button id="salvar-anotacoes-button">Salvar Anotações</button>
+                <button id="carregar-anotacoes-button">Carregar Anotações</button>
+            </div>
+        </div>
+    </div> <!-- Fim do contêiner -->
 
     <script src="script.js"></script>
 </body>
 </html>
-
