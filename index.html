@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <div class="container"> <!-- Contêiner centralizado -->
-        <h1>RPG - Criador de Personagens</h1>
+    <h1>RPG - Criador de Personagens</h1>
 
+    <div class="container">
         <div id="card-personagem" class="card">
             <div class="card-header" onclick="toggleCard('card-personagem')">
                 <h2>Personagem</h2>
@@ -82,7 +82,9 @@
                 <button id="carregar-anotacoes-button">Carregar Anotações</button>
             </div>
         </div>
-    </div> <!-- Fim do contêiner -->
+
+        <button id="redefinir-button" style="margin-top: 20px; background-color: #e74c3c; color: white; padding: 10px; border: none; cursor: pointer;">Redefinir Tudo</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
