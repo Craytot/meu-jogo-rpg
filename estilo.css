@@ -10,6 +10,15 @@ body {
     color: #444;
     line-height: 1.6;
     padding: 30px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura mínima da página */
+}
+
+.container {
+    max-width: 800px; /* Largura máxima do contêiner */
+    width: 100%; /* Largura total */
 }
 
 h1, h2 {
@@ -17,22 +26,43 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-    width: 100%; /* Botões ocupam toda a largura */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-button:hover {
+.card-header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-actions {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-actions button {
     background-color: #2980b9;
-    transform: scale(1.05);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.card-actions button:hover {
+    background-color: #1c598a;
 }
 
 textarea {
@@ -44,31 +74,17 @@ textarea {
     margin-bottom: 10px;
 }
 
-div {
-    background: white;
-    padding: 20px;
+.dado-card {
+    border: 1px solid #3498db;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    padding: 10px;
+    margin: 10px;
+    background: white;
 }
 
-p {
-    margin: 8px 0;
-}
-
-#resultado-dado {
+.resultado {
+    margin-top: 5px;
     font-weight: bold;
-    font-size: 18px;
-    color: #e74c3c;
-}
-
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    button {
-        padding: 10px; /* Ajusta o tamanho dos botões */
-    }
+    color: #e74c3c; /* Destaque em vermelho */
 }
 
